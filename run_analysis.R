@@ -54,4 +54,4 @@ chosendata <- alldata[,c(562,563, columnnumbers)]
 combined <- melt(chosendata, id.vars=c("Activity","Subject"))
 tidydata <- dcast(combined, Activity + Subject ~ variable, mean)
 
-write.table(tidydata, "tidydata.txt")
+write.table(tidydata, "tidydata.txt", row.name = FALSE)
